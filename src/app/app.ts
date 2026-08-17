@@ -441,6 +441,16 @@ export class App implements OnInit, OnDestroy {
     } catch (e) {}
   }
 
+  /** Map legacy avatarBg string to a CSS class color suffix */
+  protected getAvatarColor(bg: string): string {
+    if (bg.includes('amber') || bg.includes('yellow')) return 'gold';
+    if (bg.includes('purple') || bg.includes('indigo')) return 'purple';
+    if (bg.includes('emerald') || bg.includes('teal')) return 'teal';
+    if (bg.includes('rose') || bg.includes('pink')) return 'rose';
+    if (bg.includes('cyan') || bg.includes('blue')) return 'blue';
+    return 'gold';
+  }
+
   private loadLocalStorageData() {
     try {
       const savedSongs = localStorage.getItem('olu_fifty_songs');
