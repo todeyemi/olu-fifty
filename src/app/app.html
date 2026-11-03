@@ -1,368 +1,80 @@
 <!-- ===== NAVIGATION ===== -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#hero" class="nav-brand">
-      <div class="nav-logo">
-        <div class="nav-logo-inner"><i class="pi pi-crown"></i></div>
-      </div>
-      <div>
-        <div class="nav-title gold-text">OLU &#64; 50</div>
-        <div class="nav-sub">Golden Jubilee</div>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#music">Playlist</a></li>
-      <li><a href="#guestbook">Guestbook</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="#guestbook" class="btn btn-gold" style="padding:.55rem 1.25rem;">
-        <i class="pi pi-envelope"></i> RSVP &amp; Wishes
-      </a>
+    <a href="#top" class="nav-brand gold-text">LUMI <span class="at">&#64;</span> 50</a>
+    <div class="nav-links">
+      <a href="#evening">THE EVENING</a>
+      <a href="#feast">THE GOLDEN FEAST</a>
     </div>
-    <button class="hamburger" (click)="toggleMobileMenu()" aria-label="Menu">
-      <i class="pi" [class.pi-bars]="!mobileMenuOpen()" [class.pi-times]="mobileMenuOpen()"></i>
-    </button>
   </div>
 </nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" [class.open]="mobileMenuOpen()">
-  <a class="mobile-nav-link" href="#hero" (click)="toggleMobileMenu()"><i class="pi pi-home"></i> Home</a>
-  <a class="mobile-nav-link" href="#program" (click)="toggleMobileMenu()"><i class="pi pi-calendar"></i> Program of Events</a>
-  <a class="mobile-nav-link" href="#menu" (click)="toggleMobileMenu()"><i class="pi pi-book"></i> Menu Breakdown</a>
-  <a class="mobile-nav-link" href="#music" (click)="toggleMobileMenu()"><i class="pi pi-headphones"></i> DJ Playlist</a>
-  <a class="mobile-nav-link" href="#guestbook" (click)="toggleMobileMenu()"><i class="pi pi-heart"></i> Guestbook</a>
-  <a class="btn btn-gold btn-block" href="#guestbook" (click)="toggleMobileMenu()" style="margin-top:.75rem; border-radius:12px;">RSVP Now</a>
-</div>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main style="padding-top:68px;">
+<main id="top">
 
   <!-- HERO -->
-  <section id="hero" class="hero">
+  <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <i class="pi pi-star-fill" style="color:var(--gold-400)"></i>
-        Golden Jubilee Celebration
-        <i class="pi pi-star-fill" style="color:var(--gold-400)"></i>
-      </div>
-      <div>
-        <h1 class="hero-title">OLU &#64; 50</h1>
-        <p class="hero-tagline">50 Years of Grace, Wisdom &amp; Joy</p>
-      </div>
-      <p class="hero-desc">
-        Join us in honoring half a century of extraordinary life, achievements, and cherished memories.
-        An unforgettable night of fine dining, music, and celebration awaits.
-      </p>
-      <div class="hero-meta">
-        <div class="meta-chip">
-          <div class="meta-chip-icon"><i class="pi pi-calendar"></i></div>
-          <div class="meta-chip-text">
-            <div class="meta-chip-label">Date</div>
-            <div class="meta-chip-value">Saturday, Nov 14, 2026</div>
-          </div>
-        </div>
-        <div class="meta-chip">
-          <div class="meta-chip-icon"><i class="pi pi-map-marker"></i></div>
-          <div class="meta-chip-text">
-            <div class="meta-chip-label">Venue</div>
-            <div class="meta-chip-value">The Grand Ballroom</div>
-          </div>
-        </div>
-        <div class="meta-chip">
-          <div class="meta-chip-icon"><i class="pi pi-ticket"></i></div>
-          <div class="meta-chip-text">
-            <div class="meta-chip-label">Dress Code</div>
-            <div class="meta-chip-value gold">Black Tie &amp; Gold Elegance</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="countdown-title"><i class="pi pi-clock" style="margin-right:.375rem"></i> Countdown to the Celebration</div>
-        <div class="countdown">
-          <div class="countdown-unit">
-            <div class="countdown-num">{{ daysLeft() }}</div>
-            <div class="countdown-label">Days</div>
-          </div>
-          <div class="countdown-unit">
-            <div class="countdown-num">{{ hoursLeft() }}</div>
-            <div class="countdown-label">Hours</div>
-          </div>
-          <div class="countdown-unit">
-            <div class="countdown-num">{{ minutesLeft() }}</div>
-            <div class="countdown-label">Mins</div>
-          </div>
-          <div class="countdown-unit">
-            <div class="countdown-num">{{ secondsLeft() }}</div>
-            <div class="countdown-label">Secs</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a href="#program" class="btn btn-gold"><i class="pi pi-calendar"></i> View Program</a>
-        <a href="#menu" class="btn btn-outline"><i class="pi pi-book"></i> Explore Menu</a>
-        <button class="btn btn-ghost" (click)="openSongModal()"><i class="pi pi-music"></i> Suggest A Song</button>
-      </div>
+      <h1 class="hero-title">LUMI <span class="at">&#64;</span> 50</h1>
+      <p class="hero-subtitle">THE GOLDEN JUBILEE CELEBRATION</p>
+      <p class="hero-tagline">A CELEBRATION OF LIFE • LOVE • LEGACY</p>
     </div>
-  </section>
-  <div class="divider"></div>
+  </header>
 
   <!-- PROGRAM -->
-  <section id="program" class="section program-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="t-label" style="margin-bottom:.5rem">Schedule</div>
-        <h2 class="t-heading gold-text">Program of Events</h2>
-        <p>An organized timeline of an extraordinary evening curated especially for this occasion.</p>
-      </div>
-      <div class="filter-tabs">
-        @for (cat of ['All', 'Reception', 'Ceremony', 'Dining', 'Party']; track cat) {
-          <button class="filter-tab" [class.active]="selectedCategory() === cat" (click)="selectedCategory.set(cat)">{{ cat }}</button>
-        }
-      </div>
-      <div class="timeline-grid">
-        @for (event of filteredEvents(); track event.time; let idx = $index) {
-          <div class="glass-hover event-card">
-            <div class="event-card-top">
-              <div class="event-card-left">
-                <div class="icon-box icon-box-md"><i class="pi {{ event.icon }}"></i></div>
-                <div>
-                  <span class="badge badge-gold">{{ event.category }}</span>
-                  <h3 class="event-title">{{ event.title }}</h3>
-                  <div class="event-location"><i class="pi pi-map-marker"></i> {{ event.location }}</div>
-                </div>
-              </div>
-              <div style="text-align:right; flex-shrink:0;">
-                <div class="event-time">{{ event.time }}</div>
-              </div>
-            </div>
-            <p class="event-desc">{{ event.description }}</p>
-            <button class="event-toggle" (click)="toggleEventExpand(idx)">
-              {{ event.expanded ? 'Hide Notes' : 'View Host Notes' }}
-              <i class="pi" [class.pi-chevron-up]="event.expanded" [class.pi-chevron-down]="!event.expanded"></i>
-            </button>
-            <div class="event-expand" [class.open]="event.expanded">
-              <strong>Host Note</strong>
-              Please arrive 15 minutes before the session starts. Photography and videography will be active throughout.
-            </div>
-          </div>
-        }
-      </div>
-    </div>
-  </section>
-  <div class="divider"></div>
+  @for (section of program; track section.id) {
+    <section [id]="section.id" class="section">
+      <div class="container">
+        <div class="rule"></div>
+        <h2 class="section-title">{{ section.heading }}</h2>
+        <div class="rule"></div>
 
-  <!-- MENU -->
-  <section id="menu" class="section menu-section">
+        <ol class="schedule">
+          @for (item of section.items; track item.time) {
+            <li class="slot">
+              <div class="slot-time">{{ item.time }}</div>
+              <div class="slot-body">
+                <h3 class="slot-title">{{ item.title }}</h3>
+                <p class="slot-desc">{{ item.description }}</p>
+              </div>
+            </li>
+          }
+        </ol>
+      </div>
+    </section>
+  }
+
+  <!-- THE GOLDEN FEAST -->
+  <section id="feast" class="section feast">
     <div class="container">
-      <div class="section-header">
-        <div class="t-label" style="margin-bottom:.5rem">Gastronomy</div>
-        <h2 class="t-heading gold-text">Menu Breakdown</h2>
-        <p>An extraordinary culinary journey curated for Olu's 50th Golden Celebration.</p>
-      </div>
-      <div class="menu-tabs">
-        @for (cat of ['Canapés', 'Mains', 'Cocktails', 'Desserts']; track cat) {
-          <button class="menu-tab" [class.active]="activeMenuCategory() === cat" (click)="activeMenuCategory.set($any(cat))">{{ cat }}</button>
-        }
-      </div>
-      <div class="diet-filters">
-        <span style="font-size:.7rem; color:var(--text-3); font-weight:600; text-transform:uppercase; letter-spacing:.1em; display:flex; align-items:center;">Filter:</span>
-        @for (diet of ['All', 'Gluten-Free', 'Vegetarian', 'Spicy', 'Chef Special']; track diet) {
-          <button class="diet-btn" [class.active]="dietaryFilter() === diet" (click)="dietaryFilter.set(diet)">{{ diet }}</button>
-        }
-      </div>
+      <div class="rule"></div>
+      <h2 class="section-title">THE GOLDEN FEAST</h2>
+      <p class="feast-tagline">GOOD FOOD • BIG FLAVOUR • SWEET MEMORIES</p>
+      <div class="rule"></div>
+
       <div class="menu-grid">
-        @for (item of filteredMenuItems(); track item.id) {
-          <div class="glass-hover menu-card">
-            <div class="menu-card-head">
-              <div class="icon-box icon-box-sm"><i class="pi {{ item.imageIcon }}"></i></div>
-              @if (item.recommended) {
-                <span class="badge badge-gold"><i class="pi pi-star-fill"></i> Chef's Pick</span>
+        @for (group of menu; track group.heading) {
+          <article class="menu-card">
+            <h3 class="menu-heading">{{ group.heading }}</h3>
+            <p class="menu-tagline">{{ group.tagline }}</p>
+            <ul class="menu-list">
+              @for (dish of group.items; track dish) {
+                <li>{{ dish }}</li>
               }
-            </div>
-            <div>
-              <div class="menu-card-name">{{ item.name }}</div>
-              <p class="menu-card-desc">{{ item.description }}</p>
-            </div>
-            <div class="menu-card-tags">
-              @for (tag of item.tags; track tag) {
-                <span class="menu-tag" [class.menu-tag-gold]="tag === 'Chef Special' || tag === 'Signature Dish'">{{ tag }}</span>
-              }
-            </div>
-          </div>
+            </ul>
+          </article>
         }
       </div>
-    </div>
-  </section>
-  <div class="divider"></div>
 
-  <!-- MUSIC -->
-  <section id="music" class="section">
-    <div class="container">
-      <div class="music-layout">
-        <div class="music-intro">
-          <div>
-            <div class="t-label" style="margin-bottom:.5rem">Party Anthems</div>
-            <h2 class="t-heading gold-text">Celebration<br>DJ Playlist</h2>
-          </div>
-          <p class="t-body">
-            Music is the heartbeat of Olu's Golden Jubilee! Vote for your favourite tracks, or request
-            a special song for the live DJ set and make this night truly unforgettable.
-          </p>
-          <div class="dj-station">
-            <div class="dj-station-head">
-              <div class="icon-box icon-box-md icon-box-purple"><i class="pi pi-headphones"></i></div>
-              <div>
-                <div style="font-weight:700; font-size:.95rem; color:var(--text-1)">Live DJ Request Station</div>
-                <div style="font-size:.78rem; color:var(--text-3); margin-top:2px">Have a song that reminds you of Olu?</div>
-              </div>
-            </div>
-            <button class="btn btn-purple btn-block" (click)="openSongModal()">
-              <i class="pi pi-plus-circle"></i> Suggest A Song For The DJ
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="playlist-header">
-            <div class="playlist-header-label">Track &amp; Artist</div>
-            <div class="playlist-header-label">Votes</div>
-          </div>
-          <div class="song-list">
-            @for (song of songs(); track song.id; let rank = $index) {
-              <div class="song-item">
-                <div class="song-rank">#{{ rank + 1 }}</div>
-                <div class="song-info">
-                  <div class="song-title">{{ song.title }}</div>
-                  <div class="song-artist">{{ song.artist }}</div>
-                  @if (song.requestedBy) {
-                    <div class="song-request">Requested by {{ song.requestedBy }}</div>
-                  }
-                </div>
-                <span class="song-cat">{{ song.category }}</span>
-                <button class="vote-btn" (click)="upvoteSong(song.id)">
-                  <i class="pi pi-thumbs-up"></i> {{ song.votes }}
-                </button>
-              </div>
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="divider"></div>
-
-  <!-- GUESTBOOK -->
-  <section id="guestbook" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="t-label" style="margin-bottom:.5rem">Wishes &amp; RSVP</div>
-        <h2 class="t-heading gold-text">Guestbook &amp; Tributes</h2>
-        <p>Leave your heartfelt 50th birthday message for Olu and let him know you are celebrating!</p>
-      </div>
-      <div class="guestbook-layout">
-        <div class="wish-form">
-          <h3><i class="pi pi-heart-fill" style="color:var(--gold-500)"></i> Send Your Wish</h3>
-          <div class="success-banner" [class.hidden]="!showRsvpSuccess()">
-            <i class="pi pi-check-circle" style="font-size:1.25rem"></i>
-            <span>Thank you! Your message has been published to the guestbook wall.</span>
-          </div>
-          <form (submit)="$event.preventDefault(); submitGuestWish()">
-            <div class="form-row">
-              <label class="form-label">Your Full Name *</label>
-              <input class="input" type="text" [ngModel]="guestName()" (ngModelChange)="guestName.set($event)" name="guestName" placeholder="e.g. Dr. Bayo Adebayo" required />
-            </div>
-            <div class="form-row" style="margin-top:.875rem">
-              <label class="form-label">Relationship to Olu</label>
-              <select class="input" [ngModel]="guestRelation()" (ngModelChange)="guestRelation.set($event)" name="guestRelation">
-                <option value="Family">Family Member</option>
-                <option value="Friend">Lifelong Friend</option>
-                <option value="Colleague">Business / Colleague</option>
-                <option value="Well-wisher">Well-Wisher</option>
-              </select>
-            </div>
-            <div class="form-row" style="margin-top:.875rem">
-              <label class="form-label">Your Birthday Wish *</label>
-              <textarea class="input" rows="4" [ngModel]="guestMessage()" (ngModelChange)="guestMessage.set($event)" name="guestMessage" placeholder="Write your birthday prayer, tribute, or message..." required style="resize:vertical; min-height:100px"></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold btn-block" style="margin-top:1.25rem; border-radius:12px; padding:1rem;">
-              <i class="pi pi-send"></i> Post Birthday Message
-            </button>
-          </form>
-        </div>
-        <div>
-          <div class="wall-header">
-            <h3>Recent Tributes ({{ guestWishes().length }})</h3>
-            <span class="wall-live">Live Guest Wall</span>
-          </div>
-          <div class="wish-wall">
-            @for (wish of guestWishes(); track wish.id) {
-              <div class="wish-card animate-in">
-                <div class="wish-card-head">
-                  <div class="wish-author">
-                    <div class="wish-avatar" [ngClass]="'wish-avatar-' + getAvatarColor(wish.avatarBg)">
-                      {{ wish.name.substring(0, 1) }}
-                    </div>
-                    <div>
-                      <div class="wish-name">{{ wish.name }}</div>
-                      <div class="wish-relation">{{ wish.relation }}</div>
-                    </div>
-                  </div>
-                  <div class="wish-date">{{ wish.date }}</div>
-                </div>
-                <p class="wish-text">{{ wish.message }}</p>
-              </div>
-            }
-          </div>
-        </div>
+      <div class="closing">
+        <h2 class="closing-title">50 YEARS OF GRACE. A NIGHT OF GLAMOUR.</h2>
+        <p class="closing-line">Eat Well. Dance Hard. Celebrate Big!</p>
+        <p class="closing-welcome">Welcome to Lumi&#64;50 — Where the Vibes Are Golden!</p>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- SONG REQUEST MODAL -->
-@if (showSongModal()) {
-  <div class="modal-backdrop">
-    <div class="modal animate-in">
-      <button class="modal-close" (click)="closeSongModal()"><i class="pi pi-times"></i></button>
-      <div class="modal-head">
-        <div class="modal-icon"><i class="pi pi-music"></i></div>
-        <h3 class="modal-title gold-text">Suggest A Song</h3>
-        <p class="modal-sub">Request your favourite anthem for the DJ to play at the party!</p>
-      </div>
-      <form (submit)="$event.preventDefault(); submitSongRequest()" style="display:flex; flex-direction:column; gap:.875rem;">
-        <div class="form-row">
-          <label class="form-label">Song Title *</label>
-          <input class="input" type="text" [ngModel]="newSongTitle()" (ngModelChange)="newSongTitle.set($event)" name="newSongTitle" placeholder="e.g. Essence" required />
-        </div>
-        <div class="form-row">
-          <label class="form-label">Artist Name *</label>
-          <input class="input" type="text" [ngModel]="newSongArtist()" (ngModelChange)="newSongArtist.set($event)" name="newSongArtist" placeholder="e.g. Wizkid ft. Tems" required />
-        </div>
-        <div class="form-row">
-          <label class="form-label">Your Name</label>
-          <input class="input" type="text" [ngModel]="newSongGuest()" (ngModelChange)="newSongGuest.set($event)" name="newSongGuest" placeholder="e.g. Uncle Jimi" />
-        </div>
-        <div class="form-row">
-          <label class="form-label">Dedication Message</label>
-          <input class="input" type="text" [ngModel]="newSongMessage()" (ngModelChange)="newSongMessage.set($event)" name="newSongMessage" placeholder="e.g. Dedicated to Olu for his 50th!" />
-        </div>
-        <div style="display:flex; gap:.875rem; margin-top:.5rem;">
-          <button type="button" class="btn btn-outline" style="flex:1; justify-content:center; border-radius:12px;" (click)="closeSongModal()">Cancel</button>
-          <button type="submit" class="btn btn-purple" style="flex:1; justify-content:center; border-radius:12px;">Submit Request</button>
-        </div>
-      </form>
-    </div>
-  </div>
-}
-
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-brand gold-text">OLU &#64; 50</div>
-  <div class="footer-sub">Golden Jubilee Birthday Celebration &mdash; Designed with love &amp; gratitude</div>
-  <div class="footer-bottom">&copy; 2026 Olu &#64; 50 Golden Jubilee. All rights reserved.</div>
-</footer>
+<footer class="footer">THANK YOU FOR CELEBRATING THIS GOLDEN MILESTONE</footer>
