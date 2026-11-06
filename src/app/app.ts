@@ -138,7 +138,7 @@ export class App {
         'Classic Plain Puff-Puff',
         'Frosted Puff-Puff — Sweetness with a Glow',
         'Crispy Vegetable Spring Rolls',
-        'Meat Pie',
+        'Classic Meat-Pie',
       ],
     },
     {
